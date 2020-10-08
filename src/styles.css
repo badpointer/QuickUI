@@ -1,0 +1,127 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.searchPill {
+  background-color: #e9f5ff;
+  width: auto;
+  height: 100%;
+  border-radius: 16px;
+  display: inline-block;
+  text-decoration: none;
+  transition: filter 300ms;
+}
+
+.pillLabel {
+  font-family: Roboto;
+  font-size: 14px;
+  padding: 10px;
+  color: #0071e9;
+  display: inline-block;
+  position: relative;
+  margin-right: 3px;
+}
+
+.pillIcon {
+  color: #0071e9;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  padding-right: 8px;
+  transform: scale(1.6);
+}
+
+.pillDropDown {
+  position: absolute;
+  top: 55px;
+  width: 276px;
+  transform: translateX(5%);
+  /* background-color: #f2f2f2; */
+  border: 1px #474a4d;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+}
+
+.pill-items-list {
+  padding: 0;
+  margin: 0;
+}
+
+.pillItems {
+  height: 40px;
+  display: flex;
+  /* background-color: #eee; */
+  justify-content: start;
+  align-items: center;
+}
+
+.pillItems:hover {
+  background-color: #ebf5ff;
+}
+
+.item-label {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.pill-item-checkbox {
+  /* transform: scale(1); */
+  /* padding: 10px; */
+  margin-left: 10px;
+  margin-right: 15px;
+  /* outline: 0 solid #1e5180; */
+  /* color: #0071e9; */
+  /* background-color: #ffffff; */
+  /* border: 13px solid #ff0000; */
+  /* font-weight: bold; */
+  /* font-size: 12px; */
+  /* width: 13px; */
+  /* height: 13px; */
+  /* color: #369; */
+}
+
+/* .pill-item-checkbox:checked {
+  border: 2px solid #0071E9;
+  background-color: #0071E9;
+  content: '\2713';
+  display: block;
+  text-align: center;
+  color: #41B883;
+} */
+
+.search-bar {
+  display: flex;
+  font-size: 15px;
+  width: 330px;
+  height: 100%;
+  outline: none;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-bottom-color: #0071e9;
+  padding: 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.search-result {
+  position: relative;
+  width: auto;
+  max-height: 248px;
+  overflow-y: auto;
+  /* background-color: red; */
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding-top: 0;
+  margin-top: 0;
+}
