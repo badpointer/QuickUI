@@ -56,7 +56,7 @@ function SearchPill(props) {
   return (
     <>
       <div className="searchPill" onClick={onPress}>
-        <label className="pillLabel">Club Number</label>
+        <label className="pillLabel">{props.text}</label>
         <img src={Arrow} className="pillIcon" alt="" />
       </div>
       {open && props.children}
@@ -64,11 +64,11 @@ function SearchPill(props) {
   );
 }
 
-const clubNums = ["2564", "6694", "4665", "9679", "2236"];
+const NUMS = ["2564", "6694", "4665", "9679", "2236"];
 
 export default function App() {
   const [clubSearch, setClubSearch] = React.useState("");
-  const [searchResult, setSearchResult] = React.useState(clubNums);
+  const [searchResult, setSearchResult] = React.useState(NUMS);
   const selectedItem = (value) => {
     console.log("what was selected", value);
   };
@@ -77,14 +77,14 @@ export default function App() {
   };
 
   React.useEffect(() => {
-    const result = clubNums.filter((num) => num.includes(clubSearch));
-    if (result.length === 0) setSearchResult(clubNums);
+    const result = NUMS.filter((num) => num.includes(clubSearch));
+    if (result.length === 0) setSearchResult(NUMS);
     else setSearchResult(result);
   }, [clubSearch]);
 
   return (
     <>
-      <SearchPill>
+      <SearchPill text="Nums">
         <SearchDropDown search={_search}>
           {searchResult.map((val, index) => (
             <SearchItem selectedItem={selectedItem} key={val} text={val} />
